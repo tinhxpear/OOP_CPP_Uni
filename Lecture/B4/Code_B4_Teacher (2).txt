@@ -1,0 +1,45 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+class DT {
+int n;
+//float a[100];
+float *a;
+public:
+void nhap(int n1);
+void xuat();
+float gtri(float x);
+};
+
+void DT::nhap(int n1) {
+n= n1;
+a= new float[n+1];
+for (int i=0; i<=n; ++i) {
+cout<<"a["<<i<<"]= ";
+cin>>a[i];
+}
+}
+void DT::xuat() {
+cout<<"Cac he so cua da thuc:\n";
+for (int i=0; i<=n; ++i)
+cout<<a[i]<<" ";
+}
+float DT::gtri(float x) {
+float s=0;
+for(int i=0; i<=n; ++i)
+s+= a[i]*pow(x,i);
+return s;
+}
+int main() {
+DT d;
+int n;
+float t;
+cout<<"Bac cua da thuc: ";
+cin>>n;
+d.nhap(n);
+cout<<endl;
+d.xuat();
+cout<<"\n\nNhap so thuc t: ";
+cin>>t;
+cout<<"\nGia tri tai x = "<<t<<" la: "<<d.gtri(t);
+}

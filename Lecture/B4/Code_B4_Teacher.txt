@@ -1,0 +1,42 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+class Diem {
+float x, y;
+public:
+void nhap();
+void xuat();
+float kc();
+float kc(Diem& d); // member function, method
+friend float kc(Diem d1, Diem d2);
+};
+void Diem::nhap() {
+cout<<"Nhap toa do diem: ";
+cin>>x>>y;
+}
+void Diem::xuat() {
+cout<<"("<<x<<","<<y<<")";
+}
+float Diem::kc() {
+return sqrt(x*x + y*y);
+}
+float Diem::kc(Diem& d) {
+return sqrt(pow(x-d.x,2) + pow(y-d.y,2));
+}
+float kc(Diem d1, Diem d2) {
+return sqrt(pow(d1.x-d2.x,2) + pow(d1.y-d2.y,2));
+}
+int main() {
+Diem d1, d2;
+d1.nhap();
+d2.nhap();
+d1.xuat();
+cout<<endl;
+d2.xuat();
+cout<<"\nKhoang cach tu diem 1 den goc toa do la: ";
+cout<<d1.kc();
+cout<<"\nKhoang cach tu diem 1 den diem 2 la: ";
+cout<<d1.kc(d2);
+cout<<"\nKhoang cach tu diem 1 den diem 2 la: ";
+cout<<kc(d1,d2);
+}

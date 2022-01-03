@@ -1,0 +1,31 @@
+6
+1234
+Iphone
+Viet Nam
+1
+30
+1233
+Samsung
+Han Quoc
+2
+35
+1236
+Xiaomi
+Trung Quoc
+3
+2
+1239
+MSI
+Trung Quoc
+2
+10
+12310
+ASUS
+Dai Loan
+1
+14
+12317
+DELL
+USA
+3
+29
